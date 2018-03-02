@@ -267,6 +267,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
 endif
 
+# Native video calling
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.dbg.vt_avail_ovr=1
+
 # Disable snapshot timer
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.snapshot_enabled=0 \
