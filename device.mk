@@ -724,6 +724,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.protected_contents=true
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
+# Shared java libs
+PRODUCT_PACKAGES += \
+    com.android.nfc_extras
+
 # Early phase offset configuration for SurfaceFlinger
 #PRODUCT_PROPERTY_OVERRIDES += \
 #    debug.sf.early_phase_offset_ns=1500000
