@@ -8,3 +8,7 @@ allow system_app elabel_data_file:file r_file_perms;
 
 set_prop(system_app, vendor_bluetooth_prop)
 set_prop(system_app, public_vendor_system_prop)
+
+# Kcal
+allow system_app sysfs_kcal:dir search;	
+allow system_app sysfs_kcal:file rw_file_perms;

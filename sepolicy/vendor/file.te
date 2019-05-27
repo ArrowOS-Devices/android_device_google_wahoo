@@ -98,3 +98,6 @@ type irqbalance_socket, file_type;
 
 type sysfs_pstore, sysfs_type, fs_type;
 type ramoops_vendor_data_file, file_type, data_file_type;
+
+# kcal
+type sysfs_kcal, fs_type, sysfs_type;
