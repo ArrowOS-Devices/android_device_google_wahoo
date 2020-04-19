@@ -746,6 +746,10 @@ PRODUCT_PACKAGES += \
 #PRODUCT_PROPERTY_OVERRIDES += \
 #    debug.sf.early_gl_app_phase_offset_ns=15000000
 
+# Force triple frame buffers
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+
 # Use Vulkan backend for Skia UI rendering
 PRODUCT_PRODUCT_PROPERTIES += \
     debug.hwui.renderer=skiavk
