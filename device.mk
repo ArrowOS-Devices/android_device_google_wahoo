@@ -755,13 +755,27 @@ PRODUCT_PACKAGES += \
     PresencePolling \
     RcsService
 
+# Build necessary packages for system
+PRODUCT_PACKAGES += \
+    libhidltransport \
+    libhwbinder \
+    libmediaplayerservice:32 \
+    libstagefright_httplive:32
+
 # Build necessary packages for vendor
 PRODUCT_PACKAGES += \
+    chre \
     ese-ls-provision \
     ese-replay \
+    libdrm.vendor \
+    libhdrplusclient.vendor:32 \
+    libhidltransport.vendor \
+    libhwbinder.vendor \
     libjson \
     libsensorndkbridge:32 \
-    libtinyxml
+    libtinycompress \
+    libtinyxml \
+    libwifi-hal:64
 
 # Add missing vendor props
 PRODUCT_PROPERTY_OVERRIDES += \
