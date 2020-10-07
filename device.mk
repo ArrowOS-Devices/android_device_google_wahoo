@@ -784,6 +784,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.oem_unlock.pst_offset=6144 \
     ro.oem_unlock.pst=/dev/block/platform/soc/1da4000.ufshc/by-name/misc \
     ro.hardware.egl=adreno \
+    ro.hardware.vulkan=adreno \
     ro.gfx.driver.0=com.google.pixel.wahoo.gfxdrv
 
 # Setting vendor SPL
