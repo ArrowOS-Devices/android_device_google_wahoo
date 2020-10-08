@@ -776,7 +776,6 @@ PRODUCT_PACKAGES += \
     ese-ls-provision \
     ese-replay \
     libdrm.vendor \
-    libhdrplusclient.vendor:32 \
     libhidltransport.vendor \
     libhwbinder.vendor \
     libjson \
