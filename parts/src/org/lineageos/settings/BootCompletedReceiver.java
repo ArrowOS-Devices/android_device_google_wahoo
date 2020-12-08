@@ -31,7 +31,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         Log.d(TAG, "Received boot completed intent");
         EuiccDisabler.enableOrDisableEuicc(context);
 
-        KcalUtils.writeCurrentSettings(sharedPrefs);
-
+        if (KcalUtils.isKcalSupported())
+            KcalUtils.writeCurrentSettings(sharedPrefs);
     }
 }
