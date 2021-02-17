@@ -848,6 +848,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Setting vendor SPL
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
+# Now Playing
+PRODUCT_PACKAGES += \
+    NowPlayingOverlay
+
 # Parts
 PRODUCT_PACKAGES += \
     GoogleParts
