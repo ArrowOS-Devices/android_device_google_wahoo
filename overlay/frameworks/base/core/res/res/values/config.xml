@@ -364,4 +364,12 @@
     </string-array>
 
     <bool name="config_fingerprintSupportsGestures">true</bool>
+    
+        <!-- Flag specifying whether WFC over IMS should be available for carrier: independent of
+         carrier provisioning. If false: hard disabled. If true: then depends on carrier
+         provisioning, availability etc -->
+    <bool name="config_carrier_wfc_ims_available">true</bool>
+
+    <bool name="carrier_volte_available_bool">true</bool>
+
 </resources>
