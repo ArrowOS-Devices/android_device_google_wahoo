@@ -36,8 +36,9 @@ PRODUCT_SOONG_NAMESPACES += \
     device/google/wahoo \
     vendor/google/camera \
     hardware/google/camera \
-    hardware/google/pixel
-
+    hardware/google/pixel \
+    hardware/google/interfaces
+    
 PRODUCT_COPY_FILES += \
     device/google/wahoo/default-permissions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default-permissions/default-permissions.xml \
     device/google/wahoo/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml \
