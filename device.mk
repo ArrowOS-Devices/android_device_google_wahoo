@@ -501,6 +501,10 @@ PRODUCT_PACKAGES += \
     netutils-wrapper-1.0 \
     WifiOverlay
 
+# Connectivity
+PRODUCT_PACKAGES += \
+    ConnectivityOverlay
+
 LIB_NL := libnl_2
 PRODUCT_PACKAGES += $(LIB_NL)
 
