@@ -698,6 +698,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.gcam.fd.ensemble=1
 
+# Prebuilt GcamGO
+PRODUCT_PACKAGES += \
+    GCamGOPrebuilt
+
 # Preopt SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
@@ -752,10 +756,6 @@ PRODUCT_PACKAGES += \
 # Force triple frame buffers
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3
-
-# Use Vulkan backend for Skia UI rendering
-PRODUCT_PRODUCT_PROPERTIES += \
-    debug.hwui.renderer=skiavk
 
 # Enable blurs
 PRODUCT_PRODUCT_PROPERTIES += \
