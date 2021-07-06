@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- Kcal settings -->
+    <string name="kcal_settings_title">熒幕顏色</string>
+    <string name="kcal_settings_summary">調整熒幕的顏色</string>
+    <string name="kcal_enable_title">開啟熒幕顏色設定</string>
+    <string name="kcal_enable_summary">開啟熒幕顏色設定以進行自定義調整</string>
+    <string name="kcal_not_supported">當前系統所使用的核心不支援熒幕顏色設定</string>
+    <string name="red_slider_title">紅色</string>
+    <string name="green_slider_title">綠色</string>
+    <string name="blue_slider_title">藍色</string>    
+    <string name="kcal_rgb_preference_category_title">RGB</string>
+    <string name="kcal_calibration_preference_category_title">色彩校準</string>
+    <string name="saturation_slider_title">飽和度</string>
+    <string name="reset_default_button_title">重設至預設配置</string>
+    <string name="reset_default_button_summary">重設對於該熒幕顏色的所有配置</string>
+    <string name="contrast_slider_title">對比度</string>
+</resources>
