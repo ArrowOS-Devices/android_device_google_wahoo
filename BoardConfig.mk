@@ -68,8 +68,8 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_USES_METADATA_PARTITION := true
 
 # Partitions (listed in the file) to be wiped under recovery.
-TARGET_RECOVERY_WIPE := device/google/wahoo/recovery.wipe
-TARGET_RECOVERY_FSTAB := device/google/wahoo/fstab.hardware
+TARGET_RECOVERY_WIPE := device/google/wahoo/rootdir/etc/recovery.wipe
+TARGET_RECOVERY_FSTAB := device/google/wahoo/rootdir/etc/fstab.hardware
 
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
@@ -174,10 +174,10 @@ TARGET_USES_COLOR_METADATA := true
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
 # Vendor Interface Manifest
-DEVICE_MANIFEST_FILE := device/google/wahoo/manifest.xml
-DEVICE_MATRIX_FILE := device/google/wahoo/compatibility_matrix.xml
-DEVICE_FRAMEWORK_MANIFEST_FILE := device/google/wahoo/framework_manifest.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := device/google/wahoo/device_framework_matrix.xml
+DEVICE_MANIFEST_FILE := device/google/wahoo/configs/manifests/manifest.xml
+DEVICE_MATRIX_FILE := device/google/wahoo/configs/manifests/compatibility_matrix.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE := device/google/wahoo/configs/manifests/framework_manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := device/google/wahoo/configs/manifests/device_framework_matrix.xml
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
 # Use mke2fs to create ext4 images
