@@ -328,8 +328,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wifi_concurrency_cfg.txt:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wifi_concurrency_cfg.txt
 
 #ipacm configuration files
-PRODUCT_COPY_FILES += \
-    hardware/qcom/data/ipacfg-mgr/msm8998/ipacm/src/IPACM_cfg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/IPACM_cfg.xml
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml
 
 PRODUCT_PACKAGES += \
     hwcomposer.msm8998 \
@@ -660,9 +661,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Privileged permissions whitelist
 PRODUCT_COPY_FILES += \
     device/google/wahoo/permissions/privapp-permissions-aosp_wahoo.xml:system/etc/permissions/privapp-permissions-aosp_wahoo.xml
-
-PRODUCT_PACKAGES += \
-    ipacm
 
 #Set default CDMA subscription to RUIM
 PRODUCT_PROPERTY_OVERRIDES += \
