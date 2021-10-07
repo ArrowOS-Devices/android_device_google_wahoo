@@ -46,6 +46,7 @@ BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_CMDLINE += raid=noautodetect
 BOARD_KERNEL_CMDLINE += usbcore.autosuspend=7
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096
@@ -100,10 +101,10 @@ BOARD_USES_SYSTEM_OTHER_ODEX := true
 
 BOARD_ROOT_EXTRA_FOLDERS := persist firmware metadata
 
-BOARD_VENDOR_SEPOLICY_DIRS += device/google/wahoo/sepolicy/vendor
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR := device/google/wahoo/sepolicy/public
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR := device/google/wahoo/sepolicy/private
-BOARD_VENDOR_SEPOLICY_DIRS += device/google/wahoo/sepolicy/verizon
+#BOARD_VENDOR_SEPOLICY_DIRS += device/google/wahoo/sepolicy/vendor
+#BOARD_PLAT_PUBLIC_SEPOLICY_DIR := device/google/wahoo/sepolicy/public
+#BOARD_PLAT_PRIVATE_SEPOLICY_DIR := device/google/wahoo/sepolicy/private
+#BOARD_VENDOR_SEPOLICY_DIRS += device/google/wahoo/sepolicy/verizon
 
 TARGET_FS_CONFIG_GEN := device/google/wahoo/config.fs
 
