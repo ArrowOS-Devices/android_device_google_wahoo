@@ -202,6 +202,7 @@ PRODUCT_COPY_FILES += \
 
 # power.stats HAL
 PRODUCT_PACKAGES += \
+    android.hardware.power@1.0.vendor \
     android.hardware.power.stats@1.0-service.pixel
 
 # health HAL
@@ -262,6 +263,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.mt_sms_ack=30 \
     persist.radio.always_send_plmn=false\
     persist.rcs.supported=1
+
+# Radio Hal
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.1.vendor \
+    android.hardware.radio.config@1.0 \
+    librmnetctl \
+    libxml2
 
 ifeq (,$(_vndk_test))
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -368,6 +376,7 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth HAL
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth@1.0-impl-qti:64 \
     android.hardware.bluetooth@1.0-service-qti \
     android.hardware.bluetooth@1.0-service-qti.rc
@@ -387,6 +396,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # DRM HAL
 PRODUCT_PACKAGES += \
+    android.hardware.drm@1.1.vendor \
+    android.hardware.drm@1.2.vendor \
+    android.hardware.drm@1.3.vendor \
     android.hardware.drm@1.0-impl:32 \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.3-service.clearkey \
@@ -434,7 +446,8 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     sensors.$(PRODUCT_HARDWARE) \
     android.hardware.sensors@1.0-impl:64 \
-    android.hardware.sensors@1.0-service
+    android.hardware.sensors@1.0-service \
+    android.frameworks.sensorservice@1.0.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/hals.conf:vendor/etc/sensors/hals.conf
@@ -451,6 +464,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0-impl.generic:64 \
     android.hardware.contexthub@1.0-service
+
+# OEMLock
+PRODUCT_PACKAGES += \
+    android.hardware.oemlock@1.0.vendor
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
@@ -484,11 +501,17 @@ ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PACKAGES += wpa_cli
 endif
 
+# Network
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.3.vendor \
+    android.system.net.netd@1.1.vendor
+
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     wificond \
     libwpa_client \
+    netutils-wrapper-1.0 \
     WifiOverlay
 
 LIB_NL := libnl_2
@@ -515,6 +538,8 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl:32 \
     android.hardware.audio.effect@7.0-impl:32 \
     android.hardware.soundtrigger@2.2-impl:32 \
+    android.hardware.bluetooth.audio@2.1.vendor \
+    android.hardware.bluetooth.a2dp@1.0.vendor \
     android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.audio@2.0-service
 
@@ -589,12 +614,19 @@ PRODUCT_COPY_FILES += \
 
 # Fingerprint HIDL implementation
 PRODUCT_PACKAGES += \
+    android.frameworks.stats@1.0.vendor \
+    android.hardware.biometrics.fingerprint@2.1.vendor \
+    android.hardware.biometrics.fingerprint@2.2.vendor \
     android.hardware.biometrics.fingerprint@2.1-service.fpc
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/bin/init.fingerprint.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.fingerprint.sh \
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
+
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.safe_union@1.0.vendor
 
 # GPS configuration file
 PRODUCT_COPY_FILES += \
@@ -642,6 +674,10 @@ endif
 PRODUCT_PACKAGES += \
     android.hardware.dumpstate@1.0-service.wahoo
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0.vendor
+
 # Use daemon to detect folio open/close
 PRODUCT_PACKAGES += \
     folio_daemon
@@ -662,6 +698,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Privileged permissions whitelist
 PRODUCT_COPY_FILES += \
     device/google/wahoo/permissions/privapp-permissions-aosp_wahoo.xml:system/etc/permissions/privapp-permissions-aosp_wahoo.xml
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0.vendor
 
 #Set default CDMA subscription to RUIM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -790,6 +830,10 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libmediaplayerservice:32 \
     libstagefright_httplive:32
+
+# Media
+PRODUCT_PACKAGES += \
+    android.hardware.media.c2@1.1.vendor
 
 # Build necessary packages for vendor
 PRODUCT_PACKAGES += \
