@@ -21,13 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Keep this after including updatable_apex.mk
 PRODUCT_COMPRESSED_APEX := false
 
-ifneq (,$(filter 27, $(PRODUCT_EXTRA_VNDK_VERSIONS)))
-    _vndk_test := true
-endif
-
-ifeq (,$(_vndk_test))
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
-endif
 PRODUCT_ACTIONABLE_COMPATIBLE_PROPERTY_DISABLE := true
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -275,13 +269,8 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2
 
-ifeq (,$(_vndk_test))
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
-else
-PRODUCT_PROPERTY_OVERRIDES += \
-    rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
-endif
 
 # Native video calling
 PRODUCT_PROPERTY_OVERRIDES += \
