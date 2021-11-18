@@ -872,7 +872,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.gfx.driver.0=com.google.pixel.wahoo.gfxdrv
 
 # Setting vendor SPL
-VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
+VENDOR_SECURITY_PATCH := 2020-10-05
 
 # Now Playing
 PRODUCT_PACKAGES += \
