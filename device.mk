@@ -866,6 +866,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Setting vendor SPL
 VENDOR_SECURITY_PATCH := 2020-10-05
 
+# Now Playing
+PRODUCT_PACKAGES += \
+    NowPlayingOverlay
+
 # Shims
 PRODUCT_PACKAGES += \
     lib-imsvtshim
